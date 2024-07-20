@@ -1,0 +1,23 @@
+{
+  "name": "@quimikuaxh/common",
+  "version": "0.0.1",
+  "description": "Generic and useful functions",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm install && tsc && npm pack",
+    "clean": "rm -rf node_modules dist package-lock.json || true",
+    "clean-build": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quimikuaxh",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "@types/string-similarity": "4.0.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "6.9.0",
+    "@typescript-eslint/parser": "6.9.0",
+    "string-similarity": "4.0.4"
+  }
+}
