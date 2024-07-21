@@ -3,21 +3,27 @@
   "version": "0.0.1",
   "description": "Generic and useful functions",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm install && tsc && npm pack",
+    "build": "npm install && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist && npm pack",
     "clean": "rm -rf node_modules dist package-lock.json || true",
     "clean-build": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Quimikuaxh",
   "license": "ISC",
+  "files": [
+    "dist/*"
+  ],
   "devDependencies": {
     "@types/node": "20.14.2",
-    "@types/string-similarity": "4.0.2"
+    "@types/string-similarity": "4.0.2",
+    "tsconfig-paths": "4.2.0"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "6.9.0",
     "@typescript-eslint/parser": "6.9.0",
-    "string-similarity": "4.0.4"
+    "string-similarity": "4.0.4",
+    "tscpaths": "0.0.9"
   }
 }
